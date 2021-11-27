@@ -1,0 +1,59 @@
+<div id="main">
+    <div class="container">
+        <div class="row justify-content-center">
+            <section class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3>Sign up</h3>
+                        <form class="row g-2">
+                            <div class="col-md-12">
+                                <label for="firstName" class="form-label">First name</label>
+                                <input type="text" class="form-control" id="firstName" name="firstName"
+                                    placeholder="First name" [(ngModel)]="firstName"
+                                    [ngClass]="{'is-invalid' : (firstNameIsInvalid == true)}">
+                                <span *ngIf="firstNameIsInvalid == true" class="invalid-form">
+                                    <small class="form-text text-danger">Please enter first name.</small>
+                                </span>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="lastName" class="form-label">Last name</label>
+                                <input type="text" class="form-control" id="last" name="last" placeholder="Last name"
+                                    [(ngModel)]="lastName" [ngClass]="{'is-invalid' : (lastNameIsInvalid == true)}">
+                                <span *ngIf="lastNameIsInvalid == true" class="invalid-form">
+                                    <small class="form-text text-danger">Please enter last name.</small>
+                                </span>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Email"
+                                    [(ngModel)]="email" [ngClass]="{'is-invalid' : (emailIsInvalid == true)}">
+                                <span *ngIf="emailIsInvalid == true" class="invalid-form">
+                                    <small class="form-text text-danger">Email is invalid.</small>
+                                </span>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password" name="password"
+                                    placeholder="Password" [(ngModel)]="password"
+                                    [ngClass]="{'is-invalid' : (passwordIsInvalid == true)}">
+                                <span *ngIf="passwordIsInvalid == true" class="invalid-form">
+                                    <small class="form-text text-danger">
+                                        Password:
+                                        <ul>
+                                            <li>Should be a minimum of eight characters.</li>
+                                            <li>Should contain lower and uppercase letters.</li>
+                                            <li>Should not contain user’s first or last name.</li>
+                                        </ul>
+                                    </small>
+                                </span>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary" (click)="signUp()">Sign up</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
