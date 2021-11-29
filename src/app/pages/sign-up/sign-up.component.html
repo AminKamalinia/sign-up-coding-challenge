@@ -17,7 +17,7 @@
                             </div>
                             <div class="col-md-12">
                                 <label for="lastName" class="form-label">Last name</label>
-                                <input type="text" class="form-control" id="last" name="last" placeholder="Last name"
+                                <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last name"
                                     [(ngModel)]="lastName" [ngClass]="{'is-invalid' : (lastNameIsInvalid == true)}">
                                 <span *ngIf="lastNameIsInvalid == true" class="invalid-form">
                                     <small class="form-text text-danger">Please enter last name.</small>

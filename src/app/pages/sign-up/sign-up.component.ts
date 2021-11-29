@@ -45,7 +45,6 @@ export class SignUpComponent implements OnInit {
       signUpInput.password = Utility.sha1(this.password);
 
       this.customerService.signUp(signUpInput).then(result => {
-
       });
     }
   }

@@ -13,6 +13,6 @@ export class CustomerService {
 
   public signUp(signUpInput: SignUpInput): Promise<any> {
     return this.httpClient.post(environment.apiUrl + '/users', signUpInput, Utility.options)
-      .toPromise().then(result => result);
+      .toPromise().then(result => result).catch(result => result);
   }
 }
